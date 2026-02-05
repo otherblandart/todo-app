@@ -8,6 +8,7 @@ import '@testing-library/jest-dom';
 describe('App', () => {
   it('renders the app title', () => {
     render(<App />);
+
     expect(
       screen.getByRole('heading', {
         name: /todo list with vite, react, and zustand/i,
@@ -36,6 +37,7 @@ describe('App', () => {
 
     // Add a todo first
     const input = screen.getByPlaceholderText(/add a new todo/i);
+
     await user.type(input, 'Toggle test');
     await user.click(screen.getByRole('button', { name: /add/i }));
 
@@ -43,6 +45,7 @@ describe('App', () => {
     expect(checkbox).not.toBeChecked();
 
     await user.click(checkbox);
+
     await waitFor(() => {
       expect(checkbox).toBeChecked();
     });
@@ -54,6 +57,7 @@ describe('App', () => {
 
     // Add a todo first
     const input = screen.getByPlaceholderText(/add a new todo/i);
+
     await user.type(input, 'Delete test');
     await user.click(screen.getByRole('button', { name: /add/i }));
 
@@ -65,7 +69,6 @@ describe('App', () => {
     }
 
     const deleteButton = within(todoItem).getByRole('button', { name: '×' });
-
     await user.click(deleteButton);
 
     await waitFor(() => {
