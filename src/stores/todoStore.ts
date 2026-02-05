@@ -1,13 +1,9 @@
 import { create } from 'zustand';
 
+import type { Todo } from '../types';
 import { generateGuid } from '../utils/guid';
 
-// Define Todo shape
-type Todo = {
-  id: string;
-  text: string;
-  completed: boolean;
-};
+
 
 // Store state and actions
 interface TodoStore {
@@ -19,7 +15,11 @@ interface TodoStore {
 
 const useTodoStore = create<TodoStore>((set) => ({
   // initial
-  todos: [],
+  todos: [
+    { id: generateGuid(), text: 'Make a plan', completed: false },
+    { id: generateGuid(), text: 'Execute on it', completed: false },
+    { id: generateGuid(), text: 'Reap the rewards', completed: false },
+  ],
 
   // actions
   addTodo: (text) =>

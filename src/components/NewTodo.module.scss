@@ -1,0 +1,14 @@
+.new-todo-form {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  
+  input {
+    min-width: 15rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}

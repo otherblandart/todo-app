@@ -1,0 +1,36 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-block-end: .75rem;
+
+  input {
+    margin-inline-end: 0.5rem;
+
+    &:checked {
+      accent-color: #ca0065;
+    }
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: #ca0065;
+  color: #888;
+}
+
+.delete-button {
+  background-color: transparent;
+  color: #ca0065;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-inline-start: auto;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #ca0065;
+    color: white;
+  }
+}
