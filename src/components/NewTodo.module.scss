@@ -12,3 +12,10 @@
     border-radius: 4px;
   }
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .new-todo-form input {
+    min-width: 8rem;
+  }
+}

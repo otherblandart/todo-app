@@ -68,3 +68,11 @@ button:focus-visible {
   padding: 2rem;
   text-align: center;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #root {
+    max-width: 700px;
+    padding: 1rem;
+  }
+}

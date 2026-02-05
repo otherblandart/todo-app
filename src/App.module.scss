@@ -5,3 +5,38 @@
     margin-bottom: 1.5rem;
   }
 }
+
+.filters {
+  margin-bottom: 1rem;
+}
+
+.filterButton {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #ddd;
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+
+  &:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.selected {
+  background: #f53d99;
+  color: white;
+  border-color: #f53d99;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app h1 {
+    font-size: 1.5rem;
+    margin-inline: 10%;
+  }
+}
